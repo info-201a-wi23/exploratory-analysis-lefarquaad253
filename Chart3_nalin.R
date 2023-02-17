@@ -30,5 +30,6 @@ df <- df[order(df$df_sum),]
 
 ggplot(df)+
   geom_col(aes(x = df_name, y = df_sum))
+  #ylim(0, 30000)
+  #scale_y_continuous(name="Number of Dogs", limits=c(0, 30000))
  
-
