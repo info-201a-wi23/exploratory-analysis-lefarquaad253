@@ -1,4 +1,4 @@
-#Map of the US showing amount of adoptable dogs in each state
+#Map of the US showing amount of adoptable dogs in each state on September 20, 2019
 
 
 #Load libraries
@@ -41,11 +41,10 @@ ggplot(state_shape_data) +
                              group = group, 
                              fill = state_total)) +
   coord_map() +
-  labs(title = 'Amount of Adoptable Dogs in Each State', fill = 'Amount') +
+  labs(title = 'Distribution of Adoptable Dogs in the United States on September 20, 2019', fill = 'Amount of Dogs') +
   blank_theme
 
-
-# To make a blank them, you can create custom theme like so, and then add it to the bottom of your ggplot
+# To make a blank theme, you can create custom theme like so, and then add it to the bottom of your ggplot
 blank_theme <- theme_bw() +
   theme(
     axis.line = element_blank(), # remove axis lines
