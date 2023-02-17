@@ -12,7 +12,6 @@ library("tidyverse")
 # Load data
 allDogDescriptions <- read.csv("C:/Users/ryuta/Desktop/INFO 201 Directory/exploratory-analysis-lefarquaad253/allDogDescriptions.csv", stringsAsFactors = TRUE)
 
-
 # Load state shapefile
 state_shape <- map_data("state")
 View(state_shape)
@@ -42,8 +41,19 @@ ggplot(state_shape_data) +
                              group = group, 
                              fill = state_total)) +
   coord_map() +
-  labs(title = 'Amount of Adoptable Dogs in Each State', fill = 'Amount')
+  labs(title = 'Amount of Adoptable Dogs in Each State', fill = 'Amount') +
+  blank_theme
 
 
-
-
+# To make a blank them, you can create custom theme like so, and then add it to the bottom of your ggplot
+blank_theme <- theme_bw() +
+  theme(
+    axis.line = element_blank(), # remove axis lines
+    axis.text = element_blank(), # remove axis labels
+    axis.ticks = element_blank(), # remove axis ticks
+    axis.title = element_blank(), # remove axis titles
+    plot.background = element_blank(), # remove gray background
+    panel.grid.major = element_blank(), # remove major grid lines
+    panel.grid.minor = element_blank(), # remove minor grid lines
+    panel.border = element_blank(), # remove border around plot
+  )
