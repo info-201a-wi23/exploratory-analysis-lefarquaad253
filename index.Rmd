@@ -68,8 +68,10 @@ Describe why you chose this chart and what information it reveals
 
 Here's an example of how to run an R script inside an RMarkdown file:
 
-``````{r, echo = FALSE, code = readLines("chart1_example.R")}
+```{r Chart3.1_nalin.R , fig.width=12}
+bar_chart
 ```
+This bar chart displays the distribution of dogs in Shelters by their primary color on a given day in September, 2019. I chose to display this data through a bar chart because it uses categorical data with many categories. This data visualization means that each bar represents the count of that category. The bar chart shows that dogs with black fur were the most popular with over 7000 counts in the dataset. This was followed by dogs with white and brown fur. Whilst dogs with harlequin fur were the least popular with 73 counts. 
 
 ### Chart 2
 
