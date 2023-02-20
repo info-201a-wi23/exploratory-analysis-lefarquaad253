@@ -15,7 +15,7 @@ colors <- c("Apricot", "Bicolor", "Black", "Brindle", "Brown", "Golden", "Gray",
 count <- df_color$count
 df1 <- data.frame(colors, count)
 
-ggplot(df1)+
+bar_chart <- ggplot(df1)+
   geom_col(aes(x = reorder(colors, count), y = count, fill= colors))+
   labs(x = "Primary Color", y = "Count", title = "A Bar Chart showing the Distribution of Dogs by their Primary Color")
 
