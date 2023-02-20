@@ -3,17 +3,11 @@ title: "Exploratory Analysis"
 output: html_document
 ---
 
-## Project title
+## Dog Adoptions!
 
-Give your project a concise, interesting title that summarizes the entirety of your project
+###Ricky Le, Nalin Udomsak, Ky Truong, Chantria Im
 
-### Authors
-
-Names of your team members
-
-### Date
-
-Winter 2022
+### February 20th, 2023
 
 ### Abstract
 
