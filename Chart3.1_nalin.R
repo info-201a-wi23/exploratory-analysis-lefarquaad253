@@ -11,6 +11,12 @@ df_color <- allDogDescriptions %>%
   summarize(count = n())
 
 df_color <-df_color[-16,]
+colors <- c("Apricot", "Bicolor", "Black", "Brindle", "Brown", "Golden", "Gray", "Harlequin","Merle (Blue)", "Merle (Red)","Red", "Sable", "Tricolor", "White", "Yellow")
+count <- df_color$count
+df1 <- data.frame(colors, count)
 
-ggplot(df_color)+
-  geom_col(aes(x = reorder(color_primary, count), y = count, fill= color_primary))
+ggplot(df1)+
+  geom_col(aes(x = reorder(colors, count), y = count, fill= colors))+
+  labs(x = "Primary Color", y = "Count", title = "A Bar Chart showing the Distribution of Dogs by their Primary Color")
+
+
