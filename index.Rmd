@@ -65,13 +65,37 @@ The data set only takes into account adoption rates for a specific day which can
 
 ### Summary Information
 
-Write a summary paragraph of findings that includes the 5 values calculated from your summary information R script
+We went to see the most common age, breed, color, size, and what state had the most contacts. For age it was young, for breed it was a Yorkshire Terrier, for the color it was a combination of Yellow / Tan / Blond / Fawn. Out of the sizes the most common size was small and the state with the most contacts was Wyoming.
 
 ### Table
+```{r}
+library(dplyr)
+rm(list = ls())
+df <- read.csv("~/Info201code/exploratory-analysis-lefarquaad253/allDogDescriptions.csv")
 
-Include a table of aggregate information
+df$sex <- toupper(df$sex)
+df$sex[grep("\\bM\\b", df$sex)] <- 'MALE'
+df$sex[grep("\\bF\\b", df$sex)] <- 'FEMALE'
 
-Describe why you included the table and what information it reveals
+keep_sex <- c("MALE", "FEMALE")
+df <- df[df$sex %in% keep_sex, ]
+
+df <-
+  df %>%
+  group_by(contact_state) %>%
+  filter(contact_state == "Washington") %>%
+  subset(select = c(age, sex, contact_state))
+
+mostCommon <- 
+  df %>%
+  count(contact_state, sort = TRUE)
+
+keep_state <- as.vector(unlist(mostCommon$contact_state))[1:10]
+
+df <- df[df$contact_state %in% keep_state, ]
+```
+The data was self-reported based on a website, so it was very difficult sorting stuff out and finding the proper values. Using this table it would help us narrow down the difference between males and females and which gender was adopted more commonly. Along with helping us sort out which state had the most common adoptions as well. Creating a table to see which state had more girls or boy. adopted. We found that the state overall had the most adoptions was Wyoming and they happend to adopt more males than females based on the table. 
+
 
 ### Chart 1
 ```{r Chart3.1_nalin.R , fig.width=12}
