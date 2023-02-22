@@ -2,7 +2,12 @@
 title: "Exploratory Analysis"
 output: html_document
 ---
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, message = FALSE)
 
+#source all R files
+source('Aggregating Table.R')
+```
 ## Dog Adoptions!
 
 ###Ricky Le, Nalin Udomsak, Ky Truong, Chantria Im
@@ -71,7 +76,7 @@ We went to see the most common age, breed, color, size, and what state had the m
 ```{r}
 library(dplyr)
 rm(list = ls())
-df <- read.csv("allDogDescriptions.csv")
+df <- read.csv("allDogDescriptions.csv", stringsAsFactors = TRUE)
 
 df$sex <- toupper(df$sex)
 df$sex[grep("\\bM\\b", df$sex)] <- 'MALE'
@@ -98,13 +103,15 @@ The data was self-reported based on a website, so it was very difficult sorting 
 
 
 ### Chart 1
-```{r Chart3.1_nalin.R , fig.width=12}
+```{r barchart, fig.width=12}
+source('Chart3.1_nalin.R')
 bar_chart
 ```
 This bar chart displays the distribution of dogs in Shelters by their primary color on a given day in September, 2019. I chose to display this data through a bar chart because it uses categorical data with many categories. This data visualization means that each bar represents the count of that category. The bar chart shows that dogs with black fur were the most popular with over 7000 counts in the dataset. This was followed by dogs with white and brown fur. Whilst dogs with harlequin fur were the least popular with 73 counts. 
 
 ### Chart 2
 ```{r Pie Chart of Ages.R, fig.width=12}
+source('Pie Chart of Ages.R')
 pie
 ```
 This pie chart is a representation of the ages of dogs that were adopted from the data set. We understand that a pie chart can be misleading with it's visualization. However, our dataset is mostly cateogircal data and we believe that a pie chart is the most suitable visualization to represent our data. This pie chart shows the ages with different colors to represent the different categories they are in. The categories of ages ranges from Baby, Young, Adult, and Senior. There are 4634 Baby, 16194 Young, 27955 Adult, and 4634 Senior. 
@@ -112,6 +119,7 @@ This pie chart is a representation of the ages of dogs that were adopted from th
 
 ### Chart 3
 ```{r chart1_chantria.R , fig.width=12}
+source('chart1_chantria.R')
 map
 ```
 We chose a map to represent the distribution of adoptable dogs across the United States because it provides a visualization of which states have a high and low concentration of dogs sitting in shelters. Based on the visualization, it appears that many states within the Rocky Mountain and Midwest regions have a lower volume of dogs sitting in shelters compared to urbanized areas and states on the East Coast, such as New York, Georgia and Virginia, which have over 3000 dogs sitting in shelters. We can conclude that urbanized and populated areas are likely to have a larger pool of potential adopters compared to rural areas, which would explain why there is a larger quantity of dogs available in those regions. It is important to have relocation programs in place to ensure that dogs are properly allocated to areas where they are more likely to find homes.
