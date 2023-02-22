@@ -109,7 +109,6 @@ pie
 ```
 This pie chart is a representation of the ages of dogs that were adopted from the data set. We understand that a pie chart can be misleading with it's visualization. However, our dataset is mostly cateogircal data and we believe that a pie chart is the most suitable visualization to represent our data. This pie chart shows the ages with different colors to represent the different categories they are in. The categories of ages ranges from Baby, Young, Adult, and Senior. There are 4634 Baby, 16194 Young, 27955 Adult, and 4634 Senior. 
 
-
 ### Chart 3
 ```{r chart1_chantria.R , fig.width=12}
 map
