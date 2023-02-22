@@ -71,7 +71,7 @@ We went to see the most common age, breed, color, size, and what state had the m
 ```{r}
 library(dplyr)
 rm(list = ls())
-df <- read.csv("~/Info201code/exploratory-analysis-lefarquaad253/allDogDescriptions.csv")
+df <- read.csv("allDogDescriptions.csv")
 
 df$sex <- toupper(df$sex)
 df$sex[grep("\\bM\\b", df$sex)] <- 'MALE'

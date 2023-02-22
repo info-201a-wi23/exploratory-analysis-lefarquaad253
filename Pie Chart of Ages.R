@@ -10,7 +10,7 @@ library("dplyr")
 library(readr)
 
 # Load the data 
-allDogDescriptions <- read.csv("exploratory-analysis-lefarquaad253/allDogDescriptions.csv", stringsAsFactors = FALSE)
+allDogDescriptions <- read.csv("allDogDescriptions.csv", stringsAsFactors = FALSE)
 View(allDogDescriptions)
 
 # Sum of ages 

@@ -10,7 +10,7 @@ library("stringr")
 library("tidyverse")
 
 # Load data
-allDogDescriptions <- read.csv("C:/Users/ryuta/Desktop/INFO 201 Directory/exploratory-analysis-lefarquaad253/allDogDescriptions.csv", stringsAsFactors = TRUE)
+allDogDescriptions <- read.csv("allDogDescriptions.csv", stringsAsFactors = TRUE)
 
 # Load state shapefile
 state_shape <- map_data("state")

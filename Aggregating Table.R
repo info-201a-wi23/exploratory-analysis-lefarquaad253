@@ -1,7 +1,7 @@
 
 library(dplyr)
 rm(list = ls())
-df <- read.csv("~/Info201code/exploratory-analysis-lefarquaad253/allDogDescriptions.csv")
+df <- read.csv("allDogDescriptions.csv")
 
 df$sex <- toupper(df$sex)
 df$sex[grep("\\bM\\b", df$sex)] <- 'MALE'
