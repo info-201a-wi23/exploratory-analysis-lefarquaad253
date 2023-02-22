@@ -10,7 +10,7 @@ source('Aggregating Table.R')
 ```
 ## Dog Adoptions!
 
-###Ricky Le, Nalin Udomsak, Ky Truong, Chantria Im
+### Ricky Le, Nalin Udomsak, Ky Truong, Chantria Im
 
 ### February 20th, 2023
 
@@ -108,11 +108,11 @@ keep_state <- as.vector(unlist(mostCommon$contact_state))[1:10]
 df <- df[df$contact_state %in% keep_state, ]
 ```
 
-The data was self-reported based on a website, so it was very difficult sorting stuff out and finding the proper values. Using this table it would help us narrow down the difference between males and females and which gender was adopted more commonly. Along with helping us sort out which state had the most common adoptions as well. Creating a table to see which state had more girls or boy. adopted. We found that the state overall had the most adoptions was Wyoming and they happend to adopt more males than females based on the table.
+The data was self-reported based on a website, so it was very difficult sorting stuff out and finding the proper values. Using this table it would help us narrow down the difference between males and females and which gender was adopted more commonly. Along with helping us sort out which state had the most common adoptions as well. Creating a table to see which state had more girls or boy adopted. With the table we created we can see that the State we selected was Washington, and it will tell us the amount of females or males that were adopted. Along with telling us their age as well.
 
 ### Chart 1
 
-```{r barchart, fig.width=12}
+```{r barchart, fig.width=12, echo = FALSE, warning = FALSE, message = FALSE}
 source('Chart3.1_nalin.R')
 bar_chart
 ```
@@ -122,16 +122,16 @@ This bar chart displays the distribution of dogs in Shelters by their primary co
 ### Chart 2
 
 
-```{r Pie Chart of Ages.R, fig.width=12}
+```{r Pie Chart of Ages.R, fig.width=12, echo = FALSE, warning = FALSE, message = FALSE, results = "hide", fig.keep = "all"}
 source('Pie Chart of Ages.R')
 piechart
 ```
 
-This pie chart is a representation of the ages of dogs that were adopted from the data set. We understand that a pie chart can be misleading with it's visualization. However, our dataset is mostly cateogircal data and we believe that a pie chart is the most suitable visualization to represent our data. This pie chart shows the ages with different colors to represent the different categories they are in. The categories of ages ranges from Baby, Young, Adult, and Senior. There are 4634 Baby, 16194 Young, 27955 Adult, and 4634 Senior.
+This pie chart is a representation of the ages of dogs that were the shelter from the data set. We understand that a pie chart can be misleading with it's visualization. However, our dataset is mostly categorical data and we believe that a pie chart is the most suitable visualization to represent our data. This pie chart shows the ages with different colors to represent the different categories they are in. The categories of ages ranges from Baby, Young, Adult, and Senior. There are 4634 Baby, 16194 Young, 27955 Adult, and 4634 Senior.
 
 ### Chart 3
 
-```{r chart1_chantria.R , fig.width=12}
+```{r chart1_chantria.R , fig.width=12, echo = FALSE, warning = FALSE, message = FALSE}
 source('chart1_chantria.R')
 map
 ```
