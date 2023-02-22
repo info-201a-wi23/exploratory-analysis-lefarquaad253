@@ -10,68 +10,73 @@ output: html_document
 ### February 20th, 2023
 
 ### Abstract
-Our main question is what are the features of dogs in shelters across the United States? To address the question, we will be using data collected across all shelters on a single day in 2019. This is important because it can provide an insight into key characteristics of dogs in shelters and others can use this data to help more dogs get adopted. 
+
+Our main question is what are the features of dogs in shelters across the United States? To address the question, we will be using data collected across all shelters on a single day in 2019. This is important because it can provide an insight into key characteristics of dogs in shelters and others can use this data to help more dogs get adopted.
 
 ### Keywords
+
 Dog Adoptions, Maps, Pie Chart, Bar Chart
 
-### Introduction  
-For our research we'll prepare by observing a data set of dog shelters across the United States and what kind of dogs were adopted. One of our research questions would be what features did the adopted dogs have? Since it could be very likely that younger dogs tend to be adopted compared to older dogs. Another research question we had was certain dates of when the dogs were adopted? Because getting a house pet for Christmas can play a factor, or even giving a pet as a Valentine's gift can be possible as well. But raising a puppy would be ideal in the summer since there's good weather to take them out or there could be kids home watching over them as well. We also wonder what location of the shelter the dog was adopted in. Do certain countries or states have a higher adoption rate than others? All these questions will help us set up our data and create graphs along with charts to help the user on our website understand. Thankfully with the data we've observed we can easily understand and compare the outcomes, allowing us to answer all these questions. 
+### Introduction
 
-### Related Work  
+For our research we'll prepare by observing a data set of dog shelters across the United States and what kind of dogs were adopted. One of our research questions would be what features did the adopted dogs have? Since it could be very likely that younger dogs tend to be adopted compared to older dogs. Another research question we had was certain dates of when the dogs were adopted? Because getting a house pet for Christmas can play a factor, or even giving a pet as a Valentine's gift can be possible as well. But raising a puppy would be ideal in the summer since there's good weather to take them out or there could be kids home watching over them as well. We also wonder what location of the shelter the dog was adopted in. Do certain countries or states have a higher adoption rate than others? All these questions will help us set up our data and create graphs along with charts to help the user on our website understand. Thankfully with the data we've observed we can easily understand and compare the outcomes, allowing us to answer all these questions.
 
-According to the [American Society for the Prevention of Cruelty to Animals](https://www.aspca.org/helping-people-pets/shelter-intake-and-surrender/pet-statistics), approximately 6.5 million animals enter shelters each year and only 3.2 million are adopted.  Research shows that trends towards dog adoption and shelters have changed since the late 1960s largely due to a cultural and social shift in how we relate to dogs which have led to a sustaining decline in unwanted animals entering shelters and being euthanized. This includes the role of sterlization efforts, increased responsible pet ownership behaviors like their level of care and control [(Rowan & Kartal, 2019)](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5981279/). For animals in shelters, data collected from PetPoint shows that the adoption rate has also increased over steadily over the past decade. An article titled “Characterizing unsuccessful animal adoptions: age and breed predict the likelihood of return, reasons for return and post-return outcomes” by Powell, found that dogs were largely returned to the shelter due to behavoral problems. This includes barking, hyperactivity, and aggression towards humans and animals. For key characteristics among dogs that were returned, Powell found that young adult dogs and pit bull-type breeds made up the largest portion [(Powell et al., 2021)](https://www.nature.com/articles/s41598-021-87649-2). Lastly, an article titled “Increasing adoption rates at animal shelter: a two-phase approach to predict length of stay and optimal shelter allocation” by Bradley et al., found that the age, multicolor and size of the dogs were important factors to how long it would take for the dog to be adopted [(Bradley et al., 2021)](https://bmcvetres.biomedcentral.com/articles/10.1186/s12917-020-02728-2).
+### Related Work
+
+According to the [American Society for the Prevention of Cruelty to Animals](https://www.aspca.org/helping-people-pets/shelter-intake-and-surrender/pet-statistics), approximately 6.5 million animals enter shelters each year and only 3.2 million are adopted. Research shows that trends towards dog adoption and shelters have changed since the late 1960s largely due to a cultural and social shift in how we relate to dogs which have led to a sustaining decline in unwanted animals entering shelters and being euthanized. This includes the role of sterlization efforts, increased responsible pet ownership behaviors like their level of care and control [(Rowan & Kartal, 2019)](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5981279/). For animals in shelters, data collected from PetPoint shows that the adoption rate has also increased over steadily over the past decade. An article titled "Characterizing unsuccessful animal adoptions: age and breed predict the likelihood of return, reasons for return and post-return outcomes" by Powell, found that dogs were largely returned to the shelter due to behavoral problems. This includes barking, hyperactivity, and aggression towards humans and animals. For key characteristics among dogs that were returned, Powell found that young adult dogs and pit bull-type breeds made up the largest portion [(Powell et al., 2021)](https://www.nature.com/articles/s41598-021-87649-2). Lastly, an article titled "Increasing adoption rates at animal shelter: a two-phase approach to predict length of stay and optimal shelter allocation" by Bradley et al., found that the age, multicolor and size of the dogs were important factors to how long it would take for the dog to be adopted [(Bradley et al., 2021)](https://bmcvetres.biomedcentral.com/articles/10.1186/s12917-020-02728-2).
 
 *References*
 
-Rowan, A., & Kartal, T. Dog Population & Dog Sheltering Trends in the United States of America. *Animals : an open access journal from MDPI,* 8(5), 68 (2018). 
+Rowan, A., & Kartal, T. Dog Population & Dog Sheltering Trends in the United States of America. *Animals : an open access journal from MDPI,* 8(5), 68 (2018).
 
 Powell, L., Reinhard, C., Satriale, D. et al. Characterizing unsuccessful animal adoptions: age and breed predict the likelihood of return, reasons for return and post-return outcomes. *Sci Rep 11,* 8018 (2021).
 
-Bradley, J., Rajendran, S. Increasing adoption rates at animal shelters: a two-phase approach to predict length of stay and optimal shelter allocation. *BMC Vet Res 17,* 70 (2021). 
+Bradley, J., Rajendran, S. Increasing adoption rates at animal shelters: a two-phase approach to predict length of stay and optimal shelter allocation. *BMC Vet Res 17,* 70 (2021).
 
 ### The Dataset
+
 *Where did you find the data? Please include a link to the data source.*\
-We found the data from the links provided in the lecture slides.
-https://github.com/the-pudding/data/tree/master/dog-shelters 
+We found the data from the links provided in the lecture slides. <https://github.com/the-pudding/data/tree/master/dog-shelters>
 
 *Who collected the data?*\
-It seems that Amber Thomas was the main person in charge of collecting all the data. 
+It seems that Amber Thomas was the main person in charge of collecting all the data.
 
 *How was the data collected or generated?*\
-The data was collected from PetFinder V2 API method.
-An online website that helps track down thousands of pets that are ready for adoption across the U.S.
+The data was collected from PetFinder V2 API method. An online website that helps track down thousands of pets that are ready for adoption across the U.S.
 
 *Why was the data collected?*\
-The data was collected to provide information about dogs in shelters across America. 
+The data was collected to provide information about dogs in shelters across America.
 
 *How many observations (rows) are in your data?*\
-There are 58,180 rows in this dataset. 
+There are 58,180 rows in this dataset.
 
 *How many features (columns) are in the data?*\
-There are 36 columns in this dataset. 
+There are 36 columns in this dataset.
 
 *What, if any, ethical questions or questions of power do you need to consider when working with this data?*\
-Ethical questions we need to consider when working with this data if the dogs in this data were ever abused or neglected by their owner, shelter or transportation. This is important because we don’t want to highlight and advocate for data that wrongfully treats dogs. Additionally, do these shelters and adoption centers input false information about dogs to get them adopted? Some spaces don’t have enough capacity or no longer want specific dogs so they may lie to get people more inclined to adopt the dog. 
+Ethical questions we need to consider when working with this data if the dogs in this data were ever abused or neglected by their owner, shelter or transportation. This is important because we don't want to highlight and advocate for data that wrongfully treats dogs. Additionally, do these shelters and adoption centers input false information about dogs to get them adopted? Some spaces don't have enough capacity or no longer want specific dogs so they may lie to get people more inclined to adopt the dog.
 
 *What are possible limitations or problems with this data?*\
-The dataset of *Finding Forever Homes* has a lot of useful information that supports our findings. However, there are some problems that might interfere with our investigation. For example, one of our main concerns is that this data was collected in a single day on September 20, 2019. Additionally, it was last modified on September 29, 2019, which is only 9 days after being collected. This poses a problem due to its lack of quality assurance on how the collector processed thousands of data in one day. This can also be a limitation to our investigation since it is not a represented sample to the wide majority of dogs in U.S shelters currently. Another possible limitation with this data is the context it provides for each dog. This data only returns if a dog is adoptable or not, which can be challenging when determining the reason to why. Additionally, the condition of the shelter and transportation of the dogs are unknown. We don’t know if the dogs were ever abused or neglected in these environments which could possibly contribute to some health problems that are recorded for some dogs. The lack of context will be a limitation to our findings. 
+The dataset of *Finding Forever Homes* has a lot of useful information that supports our findings. However, there are some problems that might interfere with our investigation. For example, one of our main concerns is that this data was collected in a single day on September 20, 2019. Additionally, it was last modified on September 29, 2019, which is only 9 days after being collected. This poses a problem due to its lack of quality assurance on how the collector processed thousands of data in one day. This can also be a limitation to our investigation since it is not a represented sample to the wide majority of dogs in U.S shelters currently. Another possible limitation with this data is the context it provides for each dog. This data only returns if a dog is adoptable or not, which can be challenging when determining the reason to why. Additionally, the condition of the shelter and transportation of the dogs are unknown. We don't know if the dogs were ever abused or neglected in these environments which could possibly contribute to some health problems that are recorded for some dogs. The lack of context will be a limitation to our findings.
 
 ### Implications
-Many animals enter shelters each year but only a handful get adopted. Being able to observe and identify trends between adoption rates and breeds can help improve adoption success and provide homes for animals in need. Many factors can play a role in people’s choice to adopt, such as breed preference, lifestyle, health and location. Certain policies may need to be implemented internally and externally to increase adoption success, such as an amendment of the requirements needed for prospective owners to adopt, as well as an increase regulation on the condition of shelters, ensuring that they comply with health department requirements. 
+
+Many animals enter shelters each year but only a handful get adopted. Being able to observe and identify trends between adoption rates and breeds can help improve adoption success and provide homes for animals in need. Many factors can play a role in people's choice to adopt, such as breed preference, lifestyle, health and location. Certain policies may need to be implemented internally and externally to increase adoption success, such as an amendment of the requirements needed for prospective owners to adopt, as well as an increase regulation on the condition of shelters, ensuring that they comply with health department requirements.
 
 ### Limitations & Challenges
-The data set only takes into account adoption rates for a specific day which can greatly impact the validity of the results as a whole. The last time this data set was modified was September 29, 2019, which can present challenges because it is not representative of data as of the current date and discounts valuable information from subsequent years, such as the 2020 pandemic. During the pandemic, people were proactively adopting dogs for companionship but unfortunately there were also a flood of dogs entering adoption centers to be re-homed when life began picking again.The data set is also only representative of dogs in America and does not include data from other parts of the world. If we searched for similar data among other countries, there can be drastic differences in results based on culture and lifestyle. In addition, the column within the data set only returns when a dog is adoptable and fails to provide information of the criteria it was based upon. 
+
+The data set only takes into account adoption rates for a specific day which can greatly impact the validity of the results as a whole. The last time this data set was modified was September 29, 2019, which can present challenges because it is not representative of data as of the current date and discounts valuable information from subsequent years, such as the 2020 pandemic. During the pandemic, people were proactively adopting dogs for companionship but unfortunately there were also a flood of dogs entering adoption centers to be re-homed when life began picking again.The data set is also only representative of dogs in America and does not include data from other parts of the world. If we searched for similar data among other countries, there can be drastic differences in results based on culture and lifestyle. In addition, the column within the data set only returns when a dog is adoptable and fails to provide information of the criteria it was based upon.
 
 ### Summary Information
 
 We went to see the most common age, breed, color, size, and what state had the most contacts. For age it was young, for breed it was a Yorkshire Terrier, for the color it was a combination of Yellow / Tan / Blond / Fawn. Out of the sizes the most common size was small and the state with the most contacts was Wyoming.
 
 ### Table
+
 ```{r}
 library(dplyr)
 rm(list = ls())
-df <- read.csv("~/Info201code/exploratory-analysis-lefarquaad253/allDogDescriptions.csv")
+df <- read.csv("~/Info201code/exploratory-analysis-lefarquaad253/allDogDescriptions.csv", stringsAsFactors = TRUE)
 
 df$sex <- toupper(df$sex)
 df$sex[grep("\\bM\\b", df$sex)] <- 'MALE'
@@ -94,24 +99,29 @@ keep_state <- as.vector(unlist(mostCommon$contact_state))[1:10]
 
 df <- df[df$contact_state %in% keep_state, ]
 ```
-The data was self-reported based on a website, so it was very difficult sorting stuff out and finding the proper values. Using this table it would help us narrow down the difference between males and females and which gender was adopted more commonly. Along with helping us sort out which state had the most common adoptions as well. Creating a table to see which state had more girls or boy. adopted. We found that the state overall had the most adoptions was Wyoming and they happend to adopt more males than females based on the table. 
 
+The data was self-reported based on a website, so it was very difficult sorting stuff out and finding the proper values. Using this table it would help us narrow down the difference between males and females and which gender was adopted more commonly. Along with helping us sort out which state had the most common adoptions as well. Creating a table to see which state had more girls or boy. adopted. We found that the state overall had the most adoptions was Wyoming and they happend to adopt more males than females based on the table.
 
 ### Chart 1
+
 ```{r Chart3.1_nalin.R , fig.width=12}
 bar_chart
 ```
-This bar chart displays the distribution of dogs in Shelters by their primary color on a given day in September, 2019. I chose to display this data through a bar chart because it uses categorical data with many categories. This data visualization means that each bar represents the count of that category. The bar chart shows that dogs with black fur were the most popular with over 7000 counts in the dataset. This was followed by dogs with white and brown fur. Whilst dogs with harlequin fur were the least popular with 73 counts. 
+
+This bar chart displays the distribution of dogs in Shelters by their primary color on a given day in September, 2019. I chose to display this data through a bar chart because it uses categorical data with many categories. This data visualization means that each bar represents the count of that category. The bar chart shows that dogs with black fur were the most popular with over 7000 counts in the dataset. This was followed by dogs with white and brown fur. Whilst dogs with harlequin fur were the least popular with 73 counts.
 
 ### Chart 2
+
 ```{r Pie Chart of Ages.R, fig.width=12}
 pie
 ```
-This pie chart is a representation of the ages of dogs that were adopted from the data set. We understand that a pie chart can be misleading with it's visualization. However, our dataset is mostly cateogircal data and we believe that a pie chart is the most suitable visualization to represent our data. This pie chart shows the ages with different colors to represent the different categories they are in. The categories of ages ranges from Baby, Young, Adult, and Senior. There are 4634 Baby, 16194 Young, 27955 Adult, and 4634 Senior. 
 
+This pie chart is a representation of the ages of dogs that were adopted from the data set. We understand that a pie chart can be misleading with it's visualization. However, our dataset is mostly cateogircal data and we believe that a pie chart is the most suitable visualization to represent our data. This pie chart shows the ages with different colors to represent the different categories they are in. The categories of ages ranges from Baby, Young, Adult, and Senior. There are 4634 Baby, 16194 Young, 27955 Adult, and 4634 Senior.
 
 ### Chart 3
+
 ```{r chart1_chantria.R , fig.width=12}
 map
 ```
+
 We chose a map to represent the distribution of adoptable dogs across the United States because it provides a visualization of which states have a high and low concentration of dogs sitting in shelters. Based on the visualization, it appears that many states within the Rocky Mountain and Midwest regions have a lower volume of dogs sitting in shelters compared to urbanized areas and states on the East Coast, such as New York, Georgia and Virginia, which have over 3000 dogs sitting in shelters. We can conclude that urbanized and populated areas are likely to have a larger pool of potential adopters compared to rural areas, which would explain why there is a larger quantity of dogs available in those regions. It is important to have relocation programs in place to ensure that dogs are properly allocated to areas where they are more likely to find homes.
