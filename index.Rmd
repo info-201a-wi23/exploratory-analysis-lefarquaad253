@@ -74,7 +74,7 @@ The data set only takes into account adoption rates for a specific day which can
 
 ### Summary Information
 
-Write a summary paragraph of findings that includes the 5 values calculated from your summary information R script
+For our summary we discoverd the most common age, color, breed, size, and state at which was contacted the most for adoption. For the age the most common to be adopted were young. For the color it was "Yellow / Tan / Blond / Fawn". And for the size the most common size adopted was small and the breed that was fairly popular was "Yorkshire Terrier". Finally for the state that had the most contacts for adoption was Wyoming.
 
 ### Table
 
