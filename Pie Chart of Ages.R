@@ -1,16 +1,15 @@
 # Pie chart of the ages of adoptable dogs from the dataset 
 
 # Load libraries 
-install.packages("RColorBrewer")
-library("RColorBrewer")
+#library("RColorBrewer")
 library("ggplot2")
 library("maps")
 library("stringr")
 library("dplyr")
-library(readr)
+#library("readr")
 
 # Load the data 
-allDogDescriptions <- read.csv("exploratory-analysis-lefarquaad253/allDogDescriptions.csv", stringsAsFactors = FALSE)
+allDogDescriptions <- read.csv("allDogDescriptions.csv", stringsAsFactors = TRUE)
 View(allDogDescriptions)
 
 # Sum of ages 
@@ -23,4 +22,4 @@ age <- c(27955, 9397, 4634, 16194)
 label <- c("Adult", "Baby", "Senior", "Young")
 
 # Create pie chart 
-pie(age, label, main = "Age of Adopted Dogs", col = c("darksalmon", "cadetblue3", "darkseagreen2", "burlywood"))
+piechart <- pie(age, label, main = "Age of Dogs in Shelter", col = c("red", "blue", "green", "yellow"))

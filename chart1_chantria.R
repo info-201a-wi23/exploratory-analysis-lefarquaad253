@@ -10,7 +10,7 @@ library("stringr")
 library("tidyverse")
 
 # Load data
-allDogDescriptions <- read.csv("C:/Users/ryuta/Desktop/INFO 201 Directory/exploratory-analysis-lefarquaad253/allDogDescriptions.csv", stringsAsFactors = TRUE)
+allDogDescriptions <- read.csv("allDogDescriptions.csv", stringsAsFactors = TRUE)
 
 # Load state shapefile
 state_shape <- map_data("state")
@@ -27,6 +27,18 @@ adoption_data <- allDogDescriptions %>%
   summarize(state_total = n()) %>%
   drop_na(state_fullname)
 
+blank_theme <- theme_bw() +
+  theme(
+    axis.line = element_blank(), # remove axis lines
+    axis.text = element_blank(), # remove axis labels
+    axis.ticks = element_blank(), # remove axis ticks
+    axis.title = element_blank(), # remove axis titles
+    plot.background = element_blank(), # remove gray background
+    panel.grid.major = element_blank(), # remove major grid lines
+    panel.grid.minor = element_blank(), # remove minor grid lines
+    panel.border = element_blank(), # remove border around plot
+  )
+
 
 # Join the `state_shape` and `allDogsDescriptions` dataframes as
 # state_shape_data
@@ -35,7 +47,7 @@ state_shape_data <- left_join(state_shape,
                                  by = c("region" = "state_fullname"))
 
 # Make a choropleth map of amount of adoptable dogs by state
-ggplot(state_shape_data) +
+map <- ggplot(state_shape_data) +
   geom_polygon(mapping = aes(x = long, 
                              y = lat, 
                              group = group, 

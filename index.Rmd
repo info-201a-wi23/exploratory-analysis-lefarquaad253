@@ -2,7 +2,12 @@
 title: "Exploratory Analysis"
 output: html_document
 ---
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, message = FALSE)
 
+#source all R files
+source('Aggregating Table.R')
+```
 ## Dog Adoptions!
 
 ###Ricky Le, Nalin Udomsak, Ky Truong, Chantria Im
@@ -76,7 +81,9 @@ We went to see the most common age, breed, color, size, and what state had the m
 ```{r}
 library(dplyr)
 rm(list = ls())
-df <- read.csv("~/Info201code/exploratory-analysis-lefarquaad253/allDogDescriptions.csv", stringsAsFactors = TRUE)
+
+df <- read.csv("allDogDescriptions.csv", stringsAsFactors = TRUE)
+
 
 df$sex <- toupper(df$sex)
 df$sex[grep("\\bM\\b", df$sex)] <- 'MALE'
@@ -104,7 +111,8 @@ The data was self-reported based on a website, so it was very difficult sorting 
 
 ### Chart 1
 
-```{r Chart3.1_nalin.R , fig.width=12}
+```{r barchart, fig.width=12}
+source('Chart3.1_nalin.R')
 bar_chart
 ```
 
@@ -113,7 +121,8 @@ This bar chart displays the distribution of dogs in Shelters by their primary co
 ### Chart 2
 
 ```{r Pie Chart of Ages.R, fig.width=12}
-pie
+source('Pie Chart of Ages.R')
+piechart
 ```
 
 This pie chart is a representation of the ages of dogs that were adopted from the data set. We understand that a pie chart can be misleading with it's visualization. However, our dataset is mostly cateogircal data and we believe that a pie chart is the most suitable visualization to represent our data. This pie chart shows the ages with different colors to represent the different categories they are in. The categories of ages ranges from Baby, Young, Adult, and Senior. There are 4634 Baby, 16194 Young, 27955 Adult, and 4634 Senior.
@@ -121,6 +130,7 @@ This pie chart is a representation of the ages of dogs that were adopted from th
 ### Chart 3
 
 ```{r chart1_chantria.R , fig.width=12}
+source('chart1_chantria.R')
 map
 ```
 
